@@ -48,7 +48,7 @@
           var reader = new FileReader();
           reader.onload = function (e) {
             console.log(e)
-            var liStr = '<li><p class="img"><img src="'+e.target.result+'" alt="" class="v-m"></p></li>';
+            var liStr = '<li style="height:'+wid+'px"><p class="img"><img src="'+e.target.result+'" alt="" class="v-m"></p></li>';
             _this.prepend(liStr)
           }
           setTimeout(function(){

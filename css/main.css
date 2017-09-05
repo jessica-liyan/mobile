@@ -156,7 +156,7 @@ b{font-weight:normal;}
 
 /* 拍照 */
 .photo{font-size:0;background:#fff;padding:0.5rem;}
-.photo li{display:inline-block;width:25%;padding:0.5rem;vertical-align:top;text-align:center;height:7rem;}
+.photo li{display:inline-block;width:25%;padding:0.5rem;vertical-align:top;text-align:center;}
 .photo li .img{display:block;height:100%;overflow:hidden;}
 .photo .photo-take{border:1px solid #ddd;position:relative;overflow:hidden;height:100%;}
 .photo .photo-take img{width:4rem;}

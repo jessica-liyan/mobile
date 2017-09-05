@@ -31,14 +31,25 @@
   <script src="js/zepto.min.js"></script>
   <script>
     $(function(){
-        // 拍照
+      var _this = $('.photo') // 列表
+      var liItem = _this.find('li') // 列表每项
+      var imgInput = _this.find('#imgInput') // 照片input
+      var wid = liItem.width()
+
+      liItem.height(wid)
+      
+      imgInput.change(function(){
+        readURL(this)
+      })
+
+      // 拍照
       function readURL(input) {
         if (input.files && input.files[0]) {
           var reader = new FileReader();
           reader.onload = function (e) {
             console.log(e)
             var liStr = '<li><p class="img"><img src="'+e.target.result+'" alt="" class="v-m"></p></li>';
-            $('.photo').prepend(liStr)
+            _this.prepend(liStr)
           }
           setTimeout(function(){
             scaleImg($('.img'))
@@ -46,13 +57,9 @@
           reader.readAsDataURL(input.files[0]);
         }
       }
-      $('#imgInput').change(function(){
-        readURL(this)
-      })
       
       //处理图片比例
       function scaleImg(obj){
-        console.log('开始处理')
         obj.each(function(idx,el){
           var w = $(el).width()
           var h = $(el).height()
@@ -61,21 +68,17 @@
             var imgh = $(el).height()
             var imgw = $(el).width()
             var imgratio = imgw/imgh 
-            console.log(imgratio,ratio)
             if(imgratio > ratio){
               var imgchangew = imgw*h/imgh
               var distx = '-' + (imgchangew-w)/2 + 'px'
-              console.log('开始设置-高')
               $(el).height('100%')
               $(el).css('transform','translateX('+distx+')')
             }else{
               var imgchangeh = imgh*w/imgw
               var disty = '-' + (imgchangeh - h)/2 + 'px'
-              console.log('开始设置-宽')
               $(el).width('100%')
               $(el).css('transform','translateY('+disty+')')
             }
-            console.log(w,h,imgw,imgh)
           })
         })
       }

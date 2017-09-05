@@ -58,7 +58,7 @@ b{font-weight:normal;}
 .twoline{text-overflow:ellipsis;overflow:hidden;display:-webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
 .threeline{text-overflow:ellipsis;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient: vertical;}
 
-.line{position:relative;}
+.line,.line-top{position:relative;}
 .line:after,.line-top:after{content:"";display:inline-block;width:100%;height:1px;background:#e3e6eb;position:absolute;left:0;bottom:0;}
 .line-top:after{top:0;bottom:auto;background:#ECECEC;}
 @media only screen and (-webkit-min-device-pixel-ratio:2) {
@@ -154,6 +154,14 @@ b{font-weight:normal;}
 .product-list.blocked .img{width:100%;}
 .product-list.blocked .txt{width:100%;padding-left:0;margin-top:5px;}
 
+/* 拍照 */
+.photo{font-size:0;background:#fff;padding:0.5rem;}
+.photo li{display:inline-block;width:25%;padding:0.5rem;vertical-align:top;text-align:center;height:7rem;}
+.photo li .img{display:block;height:100%;overflow:hidden;}
+.photo .photo-take{border:1px solid #ddd;position:relative;overflow:hidden;height:100%;}
+.photo .photo-take img{width:4rem;}
+.photo .photo-take input{font-size:1000px;position:absolute;right:0;top:0;opacity:0;}
+
 .icon {
   width: 1em; height: 1em;
   vertical-align: -0.15em;
@@ -163,9 +171,7 @@ b{font-weight:normal;}
 
 .pd-2{padding:0.2rem;}.m-2{margin-left:-0.2rem;margin-right:-0.2rem;}
 
-@media only screen and(-webkit-min-device-pixel-ratio:2){
-  html{font-size:calc(100vw/37);}
-}
+
 
 /* 
 header footer的高度确定了（或者由padding来控制），main由flex:1撑满剩余的空间，再加上overflow:auto

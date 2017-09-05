@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>拍照</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="page flex-v">
+    <header class="header flex-h just-between align-center">
+      <a href="index.html"><img src="img/back.png" alt="" class="v-m"></a>
+      <h1>拍照</h1>
+      <a href="#"></a>
+    </header>
+    <section class="main auto">
+      <ul class="photo">
+        <!-- <li>
+          <p class="img"><img src="img/img4.png" alt="" class="v-m"></p>
+        </li> -->
+        <li>
+          <p class="photo-take middle">
+            <img src="img/camera.png" alt="" class="v-m">
+            <input type="file" accept="image/*" capture="camera" id="imgInput">
+          </p>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <script src="js/zepto.min.js"></script>
+  <script>
+    $(function(){
+        // 拍照
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            console.log(e)
+            var liStr = '<li><p class="img"><img src="'+e.target.result+'" alt="" class="v-m"></p></li>';
+            $('.photo').prepend(liStr)
+          }
+          setTimeout(function(){
+            scaleImg($('.img'))
+          },500)
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+      $('#imgInput').change(function(){
+        readURL(this)
+      })
+      
+      //处理图片比例
+      function scaleImg(obj){
+        console.log('开始处理')
+        obj.each(function(idx,el){
+          var w = $(el).width()
+          var h = $(el).height()
+          var ratio = w/h
+          $(el).find('img').each(function(idx,el){
+            var imgh = $(el).height()
+            var imgw = $(el).width()
+            var imgratio = imgw/imgh 
+            console.log(imgratio,ratio)
+            if(imgratio > ratio){
+              var imgchangew = imgw*h/imgh
+              var distx = '-' + (imgchangew-w)/2 + 'px'
+              console.log('开始设置-高')
+              $(el).height('100%')
+              $(el).css('transform','translateX('+distx+')')
+            }else{
+              var imgchangeh = imgh*w/imgw
+              var disty = '-' + (imgchangeh - h)/2 + 'px'
+              console.log('开始设置-宽')
+              $(el).width('100%')
+              $(el).css('transform','translateY('+disty+')')
+            }
+            console.log(w,h,imgw,imgh)
+          })
+        })
+      }
+    })
+    
+  </script>
+</body>
+</html>

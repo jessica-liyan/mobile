@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_403372_fbr8w4680duc8fr.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="page flex-v">
+    <header class="header flex-h just-between align-center">
+      <a href="#"><img src="img/back.png" alt="" class="v-m"></a>
+      <h1>首页</h1>
+      <a href="#"><img src="img/camera2.png" alt="" class="v-m"></a>
+    </header>
+    <section class="main auto">
+      <h2 class="sub-tit flex-h just-between align-center line">
+        <b>新闻资讯</b>
+        <a href="#" class="more">更多</a>
+      </h2>
+      <div>
+        <a href="#" class="tap line pd-10 bg-f flex-h align-start">
+          <span class="flex-2 pr-10">
+            <i class="fs-16 c-3 twoline lh-15">年市领导聆听社区工作总结座谈会2017年市领导聆听社区工作总结座谈会</i>
+            <i class="block mt-10 fs-12 c-9">
+              <img src="img/comment.png" alt="" class="v-m h-10">
+              <b class="v-m mr-20">26132</b>
+              <img src="img/time.png" alt="" class="v-m h-10">
+              <b class="v-m">今天 10:08</b>
+            </i>
+          </span>
+          <i class="flex-1">
+            <img src="img/img3.png" alt="" class="w v-m">
+          </i>
+        </a>
+        <a href="#" class="tap line pd-10 bg-f flex-v">
+          <i class="block fs-16 c-3 twoline lh-15">年市领导聆听社区工作总结座谈会2017年市领导聆听社区工作总结座谈会</i>
+          <span class="flex-h m-2 mt-5">
+            <i class="flex-1 pd-2"><img src="img/img3.png" alt="" class="w v-m"></i>
+            <i class="flex-1 pd-2"><img src="img/img4.png" alt="" class="w v-m"></i>
+            <i class="flex-1 pd-2"><img src="img/img5.png" alt="" class="w v-m"></i>
+          </span>
+          <i class="block mt-5 fs-12 c-9">
+            <img src="img/comment.png" alt="" class="v-m h-10">
+            <b class="v-m mr-20">26132</b>
+            <img src="img/time.png" alt="" class="v-m h-10">
+            <b class="v-m">今天 10:08</b>
+          </i>
+        </a>
+        <a href="#" class="tap line pd-10 bg-f flex-h align-start">
+          <span class="flex-2 pr-10">
+            <i class="fs-16 c-3 twoline lh-15">年市领导聆听社区工作总结座谈会2017年市领导聆听社区工作总结座谈会</i>
+            <i class="block mt-10 fs-12 c-9">
+              <img src="img/comment.png" alt="" class="v-m h-10">
+              <b class="v-m mr-20">26132</b>
+              <img src="img/time.png" alt="" class="v-m h-10">
+              <b class="v-m">今天 10:08</b>
+            </i>
+          </span>
+          <i class="flex-1">
+            <img src="img/img3.png" alt="" class="w v-m">
+          </i>
+        </a>
+        <a href="#" class="tap line pd-10 bg-f flex-v">
+          <i class="block fs-16 c-3 twoline lh-15">年市领导聆听社区工作总结座谈会2017年市领导聆听社区工作总结座谈会</i>
+          <video src="img/video.mp4" controls="controls" preload="none" class="w" poster="img/img5.png">
+          </video>
+        </a>
+      </div>
+    </section>
+    <footer class="footer flex-h just-around align-center line-top">
+      <a href="index.html" class="active">
+        <svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhuye"></use></svg>
+        <i>首页</i>
+      </a>
+      <a href="群组.html">
+        <svg class="icon" aria-hidden="true"><use xlink:href="#icon-qunzu"></use></svg>
+        <i>群组</i>
+      </a>
+      <a href="商城.html">
+        <svg class="icon" aria-hidden="true"><use xlink:href="#icon-sousuo"></use></svg>
+        <i>商城</i>
+      </a>
+      <a href="我的.html">
+        <svg class="icon" aria-hidden="true"><use xlink:href="#icon-yonghu"></use></svg>
+        <i>我的</i>
+      </a>
+    </footer>
+  </div>
+  <script src="http://at.alicdn.com/t/font_403372_cnr1n725j3q8h0k9.js"></script>
+  <script src="js/zepto.min.js"></script>
+  <script>
+    $(function(){
+      $('.footer a').click(function(){
+        $(this).addClass('active').siblings().removeClass('active')
+      })
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+html{font-size:calc(100vw/37.5);font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+html,body{height:100%;margin:0;-webkit-user-select:none;user-select:none;-webkit-overflow-scrolling:touch;}
+h1,h2,h3,h4,p,dl,dt,dd{margin:0;padding:0;}
+ul{list-style:none;margin:0;padding:0;}
+li{list-style:none;}
+img{border:none;-webkit-touch-callout:none;}
+table{border-collapse:collapse;border-spacing:0; table-layout:fixed;}
+a,button,input,select,textarea{color:inherit;font:inherit;-webkit-tap-highlight-color:transparent;border:none;}
+button,input,select,textarea{-webkit-appearance:none;padding:0;margin:0;}
+input:focus,textarea:focus,button:focus,select:focus,a:active,a:hover{outline:none;}
+a{text-decoration:none;-webkit-touch-callout:none;}
+label{-webkit-tap-highlight-color:transparent;}
+i,em{font-style:normal;}
+b{font-weight:normal;}
+*{box-sizing:border-box;}
+
+.row{display:table;}.col{display:table-cell;}.fixed{table-layout:fixed;}
+.v-t{vertical-align: top;}.v-m{vertical-align: middle;}.v-b{vertical-align: bottom;}
+.t-l{text-align:left;}.t-c{text-align:center;}.t-r{text-align:right;}
+.block{display:block;}.ib{display:inline-block;}.relative{position:relative;}
+.w{width:100%;}.h{height:100%;}
+.lh-15{line-height:1.5;}.lh-16{line-height:1.6;}.lh-18{line-height:1.8;}.lh-20{line-height:2;}
+.indent{text-indent:2em;}.auto{overflow:auto;}.autoy{overflow-y:auto;overflow-x:hidden;}.hidden{overflow:hidden;}
+.middle:before{content:"";display:inline-block;width:0;height:100%;vertical-align:middle;}
+
+.pd-3{padding:0.3rem;}.pd-5{padding:0.5rem;}.pd-10{padding:1rem;}.pd-15{padding:1.5rem;}.pd-20{padding:2rem;}
+.pt-5{padding-top:0.5rem;}.pt-10{padding-top:1rem;}.pt-15{padding-top:1.5rem;}.pt-20{padding-top:2rem;}
+.pb-5{padding-bottom:0.5rem;}.pb-10{padding-bottom:1rem;}.pb-15{padding-bottom:1.5rem;}.pb-20{padding-bottom:2rem;}
+.pl-5{padding-left:0.5rem;}.pl-10{padding-left:1rem;}.pl-15{padding-left:1.5rem;}.pl-20{padding-left:2rem;}
+.pr-5{padding-right:0.5rem;}.pr-10{padding-right:1rem;}.pr-15{padding-right:1.5rem;}.pr-20{padding-right:2rem;}
+.mt-10{margin-top:1rem;}.mb-10{margin-bottom:1rem;}.mr-10{margin-right:1rem;}.ml-10{margin-left:1rem;}
+.mr-15{margin-right:1.5rem;}
+.mt-20{margin-top:2rem;}.mr-20{margin-right:2rem;}.mb-20{margin-bottom:2rem;}.ml-20{margin-left:2rem;}
+.ml-5{margin-left:0.5rem;}.mr-5{margin-right:0.5rem;}.mt-5{margin-top:0.5rem;}.mb-5{margin-bottom:0.5rem;}
+
+.fs-0{font-size:0px;}.fs-12{font-size:1.2rem;}.fs-14{font-size:1.4rem;}.fs-15{font-size:1.5rem;}.fs-16{font-size:1.6rem;}.fs-18{font-size:1.8rem;}.fs-20{font-size:2rem;}.fs-22{font-size:2.2rem;}
+.c-3{color:#333;}.c-6{color:#666;}.c-9{color:#999;}
+.c-green{color:#72c54d;}.c-orange{color:#ff6e3d;}
+.c-blue{color:#3076ec;}.c-red{color:#ff5855;}.c-f{color:#fff;}
+.c-purple{color:#c2c0d0;}
+.bg-f{background:#fff;}.bg-blue{background:#3076ec;}
+
+.w-10{width:10%;}.w-20{width:20%;}.w-30{width:30%;}.w-40{width:40%;}.w-50{width:50%;}.w-60{width:60%;}.w-70{width:70%;}.w-80{width:80%;}.w-90{width:90%;}.w-5{width:5%;}.w-15{width:15%;}.w-25{width:25%;}.w-35{width:35%;}.w-45{width:45%;}.w-55{width:55%;}.w-65{width:65%;}.w-75{width:75%;}.w-85{width:85%;}.w-95{width:95%;}
+.w-33{width:33.33%;}
+.h-10{height:1em;width:1em;}
+.h-15{height:1.5em;width:1.5em;}
+.h-20{height:2em;width:2em;}
+.h-40{height:4em;width:4em;}
+
+.flex-h{display:flex;display:-webkit-flex;flex-direction:horizontal;-webkit-flex-direction:horizontal;}
+.flex-v{display:flex;display:-webkit-flex;flex-direction:column;-webkit-flex-direction:column;}
+.flex-wrap{flex-wrap:wrap;-webkit-flex-wrap:wrap;}
+.just-center{justify-content:center;-webkit-justify-content:center;}.just-between{justify-content:space-between;-webkit-justify-content:space-between;}.just-around{justify-content:space-around;-webkit-justify-content:space-around;}
+.align-center{align-items:center;-webkit-align-items:center;}.align-top{align-items:flex-start;-webkit-align-items:flex-start;}
+.flex-1{flex:1;-webkit-flex:1;}.flex-2{flex:2;-webkit-flex:2;}.flex-3{flex:3;-webkit-flex:3;}.flex-4{flex:4;-webkit-flex:4;}.flex-5{flex:5;-webkit-flex:5;}
+
+.oneline{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.twoline{text-overflow:ellipsis;overflow:hidden;display:-webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.threeline{text-overflow:ellipsis;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient: vertical;}
+
+.line{position:relative;}
+.line:after,.line-top:after{content:"";display:inline-block;width:100%;height:1px;background:#e3e6eb;position:absolute;left:0;bottom:0;}
+.line-top:after{top:0;bottom:auto;background:#ECECEC;}
+@media only screen and (-webkit-min-device-pixel-ratio:2) {
+  .line:after,.line-top:after{transform:scaleY(0.5);-webkit-transform:scaleY(0.5);}
+}
+@media only screen and (-webkit-min-device-pixel-ratio:3) {
+  .line:after,.line-top:after{transform:scaleY(0.33);-webkit-transform:scaleY(0.33);}
+}
+.tap:active{background:rgba(0,0,0,0.01);}
+
+.page{height:100%;background:#f5f5f5;}
+.header{height:6rem;background:#3076ec;}
+.header.red{background:#FF5855;}
+.header-info{background:#3076ec;padding:1rem;}
+.header-info .head{width:6rem;height:6rem;display:block;}
+.header a{width:5rem;text-align:center;}
+.header a img{width:1.8rem;}
+.header h1{font-size:1.8rem;color:#fff;font-weight:normal;}
+.footer{height:6rem;background:#fff;}
+.footer a{font-size:1.2rem;color:#666;text-align:center;}
+.footer a.active{color:#3076ec;}
+.footer .icon{font-size:2.6rem;}
+.footer i{display:block;margin-top:0.2em;}
+.main{flex:1;-webkit-flex:1;position:relative;}
+
+.tap:active{background:rgba(0,0,0,0.01);}
+
+.sub-tit{position:relative;font-size:1.6rem;color:#333;padding:1.5rem;background:#fff;padding-left:2rem;}
+.sub-tit:before{content:"";display:inline-block;width:3px;height:1em;position:absolute;left:0;top:50%;transform:translateY(-50%);background:#3076ec;}
+.sub-tit .more{color:#3076ec;font-size:1.4rem;font-weight:normal;}
+
+
+.tab{position:relative;z-index:5;}
+.tab-item{height:5rem;line-height:5rem;padding:0 1em;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:relative;}
+.tab-item .iconfont{font-size:1.4rem;transition:0.3s;transform-origin:center center;-webkit-transform-origin:center center;display:inline-block;position:absolute;right:0.5em;bottom:0;}
+.tab-item.active{color:#3076ec;}
+.tab-item.active .iconfont{transform:rotate(-180deg);-webkit-transform:rotate(-180deg);bottom:0;}
+
+.tab-down{position:absolute;background:rgba(0,0,0,0.3);left:0;right:0;top:5rem;bottom:0;display:none;}
+
+.type-wrapper{height:70%;overflow:hidden;background:#fff;position:relative;transition:0.3s;}
+.type-wrapper.has-btn{padding-bottom:4rem;}
+.type-list{height:100%;overflow:auto;background:#F7F7F9;}
+.type-list li{padding:1.2rem;}
+.type-list li.active{background:#fff;}
+.type-sub-list{height:100%;overflow:auto;background:#fff;padding:0 1rem;}
+.type-sub-list li{padding:1.2rem 0;position:relative;}
+.type-sub-list li:before{position:absolute;right:0;top:50%;transform:translateY(-50%);content:"";width:1.2rem;height:1.2rem;background:url('../img/chosen.png') no-repeat center center;background-size:contain;opacity:0;transition:0.3s;display:block;}
+.type-sub-list li.active,.type-sub-list li.active .iconfont{color:#3076EC;}
+.type-sub-list li.active:before{opacity:1;}
+.type-sub-list.half{padding-bottom:1rem;}
+.type-sub-list.half li{width:50%;display:inline-block;padding:0 1rem;}
+.type-sub-list.half li i{display:block;font-size:1.4rem;color:#333;padding:1.2rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.type-sub-list.half li.active i{border-bottom:1px solid #3076EC;color:#3076EC;}
+.type-sub-list.half li.active:before{right:1.2rem;}
+
+.select-list{font-size:0;margin:0.5rem -0.4rem;}
+.select-list li{display:inline-block;width:25%;vertical-align:top;padding:0.4rem;}
+.select-list li i{display:inline-block;width:100%;border:1px solid #D8DCE3;padding:0.5em;font-size:1.3rem;color:#4f5c72;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.select-list li.active i{background:#F2F7FD;border-color:#3076ec;color:#3076ec;}
+
+/* 一级筛选 */
+.mask{position:absolute;left:0;right:0;top:5rem;bottom:0;background:rgba(0,0,0,0.5);z-index:1;display:none;}
+.select-down{background:#fff;position:absolute;left:0;top:5rem;right:0;transform: translate3d(0, -100%, 0);z-index:4;transition:0.3s ease;}
+.select-down.active{transform:translate3d(0, 0, 0);}
+
+/* 左滑筛选 */
+.mask1{position:fixed;left:0;right:0;top:0;bottom:0;background:rgba(0,0,0,0.5);z-index:6;display:none;}
+.select-left{background:#fff;position:fixed;left:10%;top:0;right:0;bottom:0;z-index:10;transform:translate3d(100%, 0, 0);transition:0.3s ease;}
+.select-left.active{transform:translate3d(0, 0, 0);}
+
+/* 二级筛选 */
+.sub-tab{height:4rem;position:relative;z-index:3;}
+.sub-tab a{display:inline-block;height:2.4rem;line-height:2.4rem;background:#f0f0f0;border-radius:0.4rem;font-size:1.4rem;color:#333;position:relative;padding:0 1em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:6em;text-align:center;}
+
+.sub-tab .iconfont{font-size:1rem;transition:0.3s;display:inline-block;margin-left:3px;}
+.sub-tab a.active .iconfont{transform:rotate(-180deg);-webkit-transform:rotate(-180deg);}
+.sub-tab a.chosen{color:#3076ec;background:none;border:1px solid #3076ec;}
+.sub-tab a.chosen .iconfont{color:#3076ec;transform:rotate(-180deg);-webkit-transform:rotate(-180deg);}
+
+.mask2{position:absolute;left:0;right:0;top:9rem;bottom:0;background:rgba(0,0,0,0.5);z-index:1;display:none;}
+.sub-select-down{background:#fff;position:absolute;left:0;top:9rem;right:0;z-index:2;transition:0.3s ease;transform: translate3d(0, -100%, 0);}
+.sub-select-down.active{transform:translate3d(0, 0, 0);}
+
+/* 商品列表 */
+.product-list{font-size:0;margin:-3px;}
+.product-list li{display:inline-block;width:100%;padding:3px;}
+.product-list a{display:block;background:#fff;font-size:0;padding:0.5rem;}
+.product-list a .img{display:inline-block;width:40%;vertical-align:top;}
+.product-list a .txt{display:inline-block;width:60%;vertical-align:top;padding-left:1rem;}
+
+.product-list.blocked li{width:50%;}
+.product-list.blocked .img{width:100%;}
+.product-list.blocked .txt{width:100%;padding-left:0;}
+
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.pd-2{padding:0.2rem;}.m-2{margin-left:-0.2rem;margin-right:-0.2rem;}
+
+/* 
+header footer的高度确定了（或者由padding来控制），main由flex:1撑满剩余的空间，再加上overflow:auto
+首页的新闻---字体大小1.6rem，行高1.5
+
+
+1.通过flex:1等来确定每一小块的宽度（默认在每块中居左）
+<div class="flex-h align-center">
+  <div class="fs-16 c-3 flex-1 t-c">这是一个测试</div> 
+  <div class="fs-12 c-3 flex-1 t-c">这是另一个测试</div>
+</div>
+
+1.1通过固定其中某几块的宽度，有一块使用flex:1撑满
+<div class="flex-h align-center">
+  <div class="fs-16 c-3" style="width:10rem;">这是一个测试</div>
+  <div class="fs-12 c-3" style="flex:1;">这是另一个测试这是另一个测试这是另一个测试这是另一个测试这是另一个测试这是另一个测试</div>
+</div>
+首尾的宽度可以确定（在中间两端），中间的flex:1撑满（可以为overflow:hidden/overflow:auto）
+<div class="flex-h align-center">
+  <div class="fs-16 c-3" style="width:10rem;">这是一个测试</div>
+  <div class="fs-12 c-3" style="flex:1;white-space:nowrap;overflow:auto;">这是另一个测试这是另一个测试这是另一个测试这是另一个测试这是另一个测试这是另一个测试</div>
+  <div style="width:5rem;">这是第三个测试</div>
+</div>
+
+2.通过just-between/just-center/just-around确定两者的位置---这样尽量减少嵌套！
+<div class="flex-h align-center just-between">
+  <div class="fs-16 c-3">这是一个测试</div>
+  <div class="fs-12 c-3">这是另一个测试</div>
+</div>
+
+3.外层如果设置高度或padding，各块垂直居中加align-center
+<div class="flex-h align-center just-between" style="height:3rem;">
+  <div class="fs-16 c-3">这是一个测试</div>
+  <div class="fs-12 c-3">这是另一个测试</div>
+</div>
+<div class="flex-h align-center just-between" style="padding:3rem;">
+  <div class="fs-16 c-3">这是一个测试</div>
+  <div class="fs-12 c-3">这是另一个测试</div>
+</div>
+
+每块确定空间大小后，可以使用oneline
+<div class="flex-h align-center">
+  <div class="fs-16 c-3 flex-3">这是一个测试</div>
+  <div class="fs-12 c-3 flex-2 oneline">这是另一个测试这是另一个测试这是另一个测试这是另一个测试这是另一个测试这是另一个测试</div>
+</div>
+
+<div class="flex-h align-center">
+  <div class="fs-16 c-3" style="width:10rem;">这是一个测试</div>
+  <div class="fs-12 c-3 oneline" style="flex:1">这是另一个测试这是另一个测试这是另一个测试这是另一个测试这是另一个测试这是另一个测试</div>
+</div>
+
+audio支持Ie9+ 
+ */
+
+
+
+

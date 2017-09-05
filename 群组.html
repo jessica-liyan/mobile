@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>群组</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_403372_x1eqmygcy9orbe29.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="page flex-v">
+    <header class="header flex-h just-between align-center">
+      <a href="#"><img src="img/back.png" alt="" class="v-m"></a>
+      <h1>群组</h1>
+      <a href="#" class="changeStyle"><img src="img/list.png" alt="" class="listStyle v-m" style="display:none;"><img src="img/block.png" alt="" class="blockStyle v-m"></a>
+    </header>
+    <section class="main hidden flex-v">
+      <div class="tab bg-f line flex-h align-center">
+        <a href="#" class="tab-item flex-1 fs-16 c-3">
+          <i>综合</i>
+          <span class="iconfont icon-xiangjiantou"></span>
+        </a>
+        <a href="#" class="tab-item flex-1 fs-16 c-3">
+          <i>销量</i>
+          <span class="iconfont icon-xiangjiantou"></span>
+        </a> 
+        <a href="#" class="tab-item flex-1 fs-16 c-3">
+          <i>价格</i>
+          <span class="iconfont icon-xiangjiantou"></span>
+        </a>
+        <a href="#" class="tab-item flex-1 fs-16 c-3">
+          <i>筛选</i>
+          <span class="iconfont icon-choose"></span>
+        </a>
+      </div>
+      <div class="sub-tab bg-f line flex-h align-center just-around">
+        <a href="#"><i>价格</i><span class="iconfont icon-xiangjiantou"></span><b></b></a>
+        <a href="#"><i>商圈</i><span class="iconfont icon-xiangjiantou"></span><b></b></a>
+        <a href="#"><i>品牌</i><span class="iconfont icon-xiangjiantou"></span><b></b></a>
+        <a href="#"><i>材质</i><span class="iconfont icon-xiangjiantou"></span><b></b></a>
+      </div>
+      <!-- 二级筛选下滑 -->
+      <div class="mask2"></div> 
+      <div class="sub-select-down">
+        <ul class="type-sub-list fs-0 half">
+          <li><i>不限</i></li>
+          <li><i>100以下</i></li>
+          <li><i>100-200</i></li>
+          <li><i>200-300</i></li>
+          <li><i>300-500</i></li>
+          <li><i>500以上</i></li>
+        </ul>
+        <div class="flex flex-h">
+          <a href="#" class="flex-1 fs-16 c-3 bg-f reset pd-10 t-c">重置</a>
+          <a href="#" class="flex-1 fs-16 c-f bg-blue sure pd-10 t-c">确定</a>
+        </div>
+      </div>
+      <div class="sub-select-down">
+        <ul class="type-sub-list fs-0 half">
+          <li><i>街道口</i></li>
+          <li><i>光谷/鲁巷</i></li>
+          <li><i>武汉广场武汉广场武汉广场</i></li>
+          <li><i>楚河汉街</i></li>
+          <li><i>徐东大街</i></li>
+        </ul>
+        <div class="flex flex-h">
+          <a href="#" class="flex-1 fs-16 c-3 bg-f reset pd-10 t-c">重置</a>
+          <a href="#" class="flex-1 fs-16 c-f bg-blue sure pd-10 t-c">确定</a>
+        </div>
+      </div>
+      <div class="sub-select-down">
+        <ul class="type-sub-list fs-0 half">
+          <li><i>特步</i></li>
+          <li><i>耐克</i></li>
+          <li><i>阿迪</i></li>
+          <li><i>李宁</i></li>
+          <li><i>匡威</i></li>
+          <li><i>鸿星尔克</i></li>
+        </ul>
+        <div class="flex flex-h">
+          <a href="#" class="flex-1 fs-16 c-3 bg-f reset pd-10 t-c">重置</a>
+          <a href="#" class="flex-1 fs-16 c-f bg-blue sure pd-10 t-c">确定</a>
+        </div>
+      </div>
+      <div class="sub-select-down">
+        <ul class="type-sub-list fs-0 half">
+          <li><i>毛绒</i></li>
+          <li><i>混纺</i></li>
+          <li><i>皮毛一体</i></li>
+          <li><i>其他</i></li>
+          <li><i>化纤</i></li>
+        </ul>
+        <div class="flex flex-h">
+          <a href="#" class="flex-1 fs-16 c-3 bg-f reset pd-10 t-c">重置</a>
+          <a href="#" class="flex-1 fs-16 c-f bg-blue sure pd-10 t-c">确定</a>
+        </div>
+      </div>
+       <!--一级排序下拉  -->
+      <div class="mask"></div> 
+      <div class="select-down">
+        <ul class="type-sub-list fs-14 c-3">
+          <li>综合排序</li>
+          <li>新品优先</li>
+          <li>评论由高到低</li>
+        </ul>
+      </div>
+      <!-- 筛选左滑 -->
+      <div class="mask1"></div> 
+      <div class="select-left flex-v">
+        <div class="flex-1 auto pd-10">
+          <p class="flex-h just-between align-center"><i class="fs-14 c-6 ml-5 v-m flex-1">价格</i><i class="c-blue chosenType flex-5 oneline t-r"></i></p>
+          <ul class="select-list">
+            <li><i>不限</i></li>
+            <li><i>100以下</i></li>
+            <li><i>100-200</i></li>
+            <li><i>200-300</i></li>
+            <li><i>300-500</i></li>
+            <li><i>500以上</i></li>
+          </ul>
+          <p class="flex-h just-between align-center"><i class="fs-14 c-6 ml-5 v-m flex-1">商圈</i><i class="c-blue chosenType flex-5 oneline t-r"></i></p>
+          <ul class="select-list">
+            <li><i>街道口</i></li>
+            <li><i>光谷/鲁巷</i></li>
+            <li><i>武汉广场武汉广场武汉广场</i></li>
+            <li><i>楚河汉街</i></li>
+            <li><i>徐东大街</i></li>
+          </ul>
+          <p class="flex-h just-between align-center"><i class="fs-14 c-6 ml-5 v-m flex-1">品牌</i><i class="c-blue chosenType flex-5 oneline t-r"></i></p>
+          <ul class="select-list">
+            <li><i>特步</i></li>
+            <li><i>耐克</i></li>
+            <li><i>阿迪</i></li>
+            <li><i>李宁</i></li>
+            <li><i>匡威</i></li>
+            <li><i>鸿星尔克</i></li>
+          </ul>
+          <p class="flex-h just-between align-center"><i class="fs-14 c-6 ml-5 v-m flex-1">材质</i><i class="c-blue chosenType flex-5 oneline t-r"></i></p>
+          <ul class="select-list">
+            <li><i>毛绒</i></li>
+            <li><i>混纺</i></li>
+            <li><i>皮毛一体</i></li>
+            <li><i>其他</i></li>
+            <li><i>化纤</i></li>
+          </ul>
+          <p class="flex-h just-between align-center"><i class="fs-14 c-6 ml-5 v-m flex-1">商圈</i><i class="c-blue chosenType flex-5 oneline t-r"></i></p>
+          <ul class="select-list">
+            <li><i>街道口</i></li>
+            <li><i>光谷/鲁巷</i></li>
+            <li><i>武汉广场武汉广场武汉广场</i></li>
+            <li><i>楚河汉街</i></li>
+            <li><i>徐东大街</i></li>
+          </ul>
+          <p class="flex-h just-between align-center"><i class="fs-14 c-6 ml-5 v-m flex-1">商圈</i><i class="c-blue chosenType flex-5 oneline t-r"></i></p>
+          <ul class="select-list">
+            <li><i>街道口</i></li>
+            <li><i>光谷/鲁巷</i></li>
+            <li><i>武汉广场武汉广场武汉广场</i></li>
+            <li><i>楚河汉街</i></li>
+            <li><i>徐东大街</i></li>
+          </ul>
+        </div>
+        <div>
+          <div class="flex flex-h">
+            <a href="#" class="flex-1 fs-16 c-3 bg-f reset pd-15 t-c">重置</a>
+            <a href="#" class="flex-1 fs-16 c-f bg-blue sure pd-15 t-c">确定</a>
+          </div>
+        </div>
+      </div>
+      <!-- 商品列表 -->
+      <ul class="product-list flex-1 auto">
+        <li>
+          <a href="#" class="tap">
+            <span class="img"><img src="img/img5.png" alt="" class="v-m w"></span>
+            <span class="txt">
+              <b class="fs-16 c-3 lh-15 twoline mb-5 mt-5">韩版显瘦牛仔裤韩版显瘦牛仔裤韩版显瘦牛仔裤韩版显瘦牛仔裤韩版</b>
+              <i class="block fs-12 c-9 mb-5">深圳</i>
+              <i class="flex flex-h just-between align-center">
+                <b class="fs-20 c-red">￥99</b>
+                <b class="fs-12 c-9">1550人付款</b>
+              </i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="tap">
+            <span class="img"><img src="img/img6.png" alt="" class="v-m w"></span>
+            <span class="txt">
+              <b class="fs-16 c-3 lh-15 twoline mb-5 mt-5">韩版显瘦牛仔裤韩版显瘦牛仔裤韩版显瘦牛仔裤韩版显瘦牛仔裤韩版</b>
+              <i class="block fs-12 c-9 mb-5">深圳</i>
+              <i class="flex flex-h just-between align-center">
+                <b class="fs-20 c-red">￥100</b>
+                <b class="fs-12 c-9">1550人付款</b>
+              </i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="tap">
+            <span class="img"><img src="img/img3.png" alt="" class="v-m w"></span>
+            <span class="txt">
+              <b class="fs-16 c-3 lh-15 twoline mb-5 mt-5">韩版显瘦牛仔裤韩版显瘦牛仔裤韩版显瘦牛仔裤韩版显瘦牛仔裤韩版</b>
+              <i class="block fs-12 c-9 mb-5">深圳</i>
+              <i class="flex flex-h just-between align-center">
+                <b class="fs-20 c-red">￥199</b>
+                <b class="fs-12 c-9">1550人付款</b>
+              </i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="tap">
+            <span class="img"><img src="img/img4.png" alt="" class="v-m w"></span>
+            <span class="txt">
+              <b class="fs-16 c-3 lh-15 twoline mb-5 mt-5">韩版显瘦牛仔裤韩版显瘦牛仔裤韩版显瘦牛仔裤韩版显瘦牛仔裤韩版</b>
+              <i class="block fs-12 c-9 mb-5">深圳</i>
+              <i class="flex flex-h just-between align-center">
+                <b class="fs-20 c-red">￥399</b>
+                <b class="fs-12 c-9">1550人付款</b>
+              </i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="tap">
+            <span class="img"><img src="img/img6.png" alt="" class="v-m w"></span>
+            <span class="txt">
+              <b class="fs-16 c-3 lh-15 twoline mb-5 mt-5">韩版显瘦牛仔裤韩版显瘦牛仔裤韩版显瘦牛仔裤韩版显瘦牛仔裤韩版</b>
+              <i class="block fs-12 c-9 mb-5">深圳</i>
+              <i class="flex flex-h just-between align-center">
+                <b class="fs-20 c-red">￥599</b>
+                <b class="fs-12 c-9">1550人付款</b>
+              </i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="tap">
+            <span class="img"><img src="img/img3.png" alt="" class="v-m w"></span>
+            <span class="txt">
+              <b class="fs-16 c-3 lh-15 twoline mb-5 mt-5">韩版显瘦牛仔裤韩版显瘦牛仔裤韩版显瘦牛仔裤韩版显瘦牛仔裤韩版</b>
+              <i class="block fs-12 c-9 mb-5">深圳</i>
+              <i class="flex flex-h just-between align-center">
+                <b class="fs-20 c-red">￥499</b>
+                <b class="fs-12 c-9">1550人付款</b>
+              </i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="tap">
+            <span class="img"><img src="img/img4.png" alt="" class="v-m w"></span>
+            <span class="txt">
+              <b class="fs-16 c-3 lh-15 twoline mb-5 mt-5">韩版显瘦牛仔裤韩版显瘦牛仔裤韩版显瘦牛仔裤韩版显瘦牛仔裤韩版</b>
+              <i class="block fs-12 c-9 mb-5">深圳</i>
+              <i class="flex flex-h just-between align-center">
+                <b class="fs-20 c-red">￥699</b>
+                <b class="fs-12 c-9">1550人付款</b>
+              </i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="tap">
+            <span class="img"><img src="img/img5.png" alt="" class="v-m w"></span>
+            <span class="txt">
+              <b class="fs-16 c-3 lh-15 twoline mb-5 mt-5">韩版显瘦牛仔裤韩版显瘦牛仔裤韩版显瘦牛仔裤韩版显瘦牛仔裤韩版</b>
+              <i class="block fs-12 c-9 mb-5">深圳</i>
+              <i class="flex flex-h just-between align-center">
+                <b class="fs-20 c-red">￥599</b>
+                <b class="fs-12 c-9">1550人付款</b>
+              </i>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <footer class="footer flex-h just-around align-center line-top">
+      <a href="index.html">
+        <svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhuye"></use></svg>
+        <i>首页</i>
+      </a>
+      <a href="群组.html" class="active">
+        <svg class="icon" aria-hidden="true"><use xlink:href="#icon-qunzu"></use></svg>
+        <i>群组</i>
+      </a>
+      <a href="商城.html">
+        <svg class="icon" aria-hidden="true"><use xlink:href="#icon-sousuo"></use></svg>
+        <i>商城</i>
+      </a>
+      <a href="我的.html">
+        <svg class="icon" aria-hidden="true"><use xlink:href="#icon-yonghu"></use></svg>
+        <i>我的</i>
+      </a>
+    </footer>
+  </div>
+  <script src="http://at.alicdn.com/t/font_403372_cnr1n725j3q8h0k9.js"></script>
+  <script src="js/zepto.min.js"></script>
+  <script>
+    $(function(){
+      $('.footer a').click(function(){
+        $(this).addClass('active').siblings().removeClass('active')
+      })
+      // 商品列表样式切换
+      $('.changeStyle').click(function(){
+        $(this).find('.listStyle').toggle()
+        $(this).find('.blockStyle').toggle()
+        $('.product-list').toggleClass('blocked')
+      })
+      // 分类筛选
+      $('.select-list').each(function(){
+        var arr = []
+        $(this).find('li').click(function(){
+          $(this).toggleClass('active')
+          // 存放选中项(数组)
+          var text = $(this).find('i').html()
+          if($(this).hasClass('active')){
+            arr.push(text)
+          }else{
+            arr.forEach(function(val,idx){
+              if(arr[idx] == text){
+                arr.splice(idx,1)
+              }
+            })
+          }
+          var chosenObj = $(this).parent('.select-list').prev('p').find('.chosenType')
+          chosenObj.html(arr.join(','))
+        })
+      })
+      // 一级筛选
+      $('.tab-item').each(function(idx,el){
+        $(this).click(function(){
+          $(this).toggleClass('active')
+          if(idx === 0){
+            $('.mask').toggle()
+            $('.select-down').toggleClass('active')
+            // 取消
+            $('.mask').click(function(){
+              $('.mask').hide()
+              $('.select-down').removeClass('active')
+              $('.tab-item').eq(0).removeClass('active')
+            })
+            // 排序点击选择
+            $('.select-down .type-sub-list li').click(function(){
+              $(this).addClass('active').siblings().removeClass('active')
+              $('.tab-item').eq(0).removeClass('active')
+              $('.mask').hide()
+              $('.select-down').removeClass('active')
+              $('.tab-item').eq(0).find('i').html($(this).html())
+            })
+          }
+          if(idx === 3){
+            $('.mask1').toggle()
+            $('.select-left').toggleClass('active')
+            
+            // 取消
+            $('.mask1').click(function(){
+              $('.mask1').hide()
+              $('.select-left').removeClass('active')
+              $('.tab-item').eq(3).removeClass('active')
+            })
+            // 确定
+            $('.sure').click(function(){
+              $('.mask1').hide()
+              $('.select-left').removeClass('active')
+              $('.tab-item').eq(3).removeClass('active')
+              
+              var str = ''
+              $('.select-list').find('.active').each(function(idx,el){
+                str += $(el).find('i').html() + '/'
+              })
+              console.log(str)
+            })
+            // 重置
+            $('.reset').click(function(){
+              $('.select-list').find('li').removeClass('active')
+              $('.chosenType').html('')
+            })
+          }
+        })
+      })
+
+      // 二级分类筛选 
+      $('.sub-tab a').each(function(idx,el){
+        var _this = $(this)
+        var selectDown = $('.sub-select-down').eq(idx)
+        var selectList = selectDown.find('.type-sub-list')
+        var selectDownSure = selectDown.find('.sure')
+        var selectDownReset = selectDown.find('.reset')
+        var arr = [] //存放选中的数组
+        // 点击
+        selectList.find('li').click(function(){
+          var text = $(this).find('i').html()
+          $(this).toggleClass('active')
+          if($(this).hasClass('active')){
+            arr.unshift(text)
+            console.log(arr,'active')
+          }else{
+            arr.forEach(function(val,idx){
+              if(arr[idx] == text){
+                console.log(idx,'选中')
+                arr.splice(idx,1)
+              }
+            })
+          }
+        })
+        _this.click(function(){
+          _this.toggleClass('active')
+          selectDown.toggleClass('active')
+          // 阴影遮罩
+          if( _this.hasClass('active')){
+            $('.mask2').show()
+            _this.siblings().removeClass('active')
+          }else{
+            $('.mask2').hide()
+          }
+          
+          if(selectDown.hasClass('active')){
+            selectDown.siblings('.sub-select-down').removeClass('active')
+          }
+          
+          // 确定
+          selectDownSure.click(function(){
+            $('.mask2').hide()
+            selectDown.removeClass('active')
+            if(arr.length){
+              _this.addClass('chosen')
+              _this.find('b').html(arr.join('/'))
+              _this.find('.iconfont').hide()
+              _this.find('i').hide()
+            }else{
+              _this.removeClass('active chosen')
+              _this.find('b').html('')
+              _this.find('.iconfont').show()
+              _this.find('i').show()
+            }
+          })
+          // 重置
+          selectDownReset.click(function(){
+            selectList.find('li').removeClass('active')
+            arr = []
+          })
+        })
+      })
+    })
+  </script>
+</body>
+</html>

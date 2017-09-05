@@ -307,74 +307,103 @@
         $(this).find('.blockStyle').toggle()
         $('.product-list').toggleClass('blocked')
       })
-      // 分类筛选
+      // 左滑筛选数组
       $('.select-list').each(function(){
-        var arr = []
-        $(this).find('li').click(function(){
+        
+        var _this = $(this)
+        var chosenObj = _this.prev('p').find('.chosenType')
+        _this.find('li').click(function(){
           $(this).toggleClass('active')
-          // 存放选中项(数组)
-          var text = $(this).find('i').html()
-          if($(this).hasClass('active')){
-            arr.push(text)
-          }else{
-            arr.forEach(function(val,idx){
-              if(arr[idx] == text){
-                arr.splice(idx,1)
-              }
-            })
-          }
-          var chosenObj = $(this).parent('.select-list').prev('p').find('.chosenType')
-          chosenObj.html(arr.join(','))
+          $(this).trigger('change')
         })
+        _this.find('li').bind('change',function(){
+          change()
+        })
+        function change(){
+          var arr = []
+          _this.find('li').each(function(){
+            var text = $(this).find('i').html()
+            if($(this).hasClass('active')){
+              arr.push(text)
+            }else{
+              arr.forEach(function(val,idx){
+                if(arr[idx] == text){
+                  arr.splice(idx,1)
+                }
+              })
+            }
+            chosenObj.html(arr.join(','))
+          })
+        }
       })
+
       // 一级筛选
       $('.tab-item').each(function(idx,el){
-        $(this).click(function(){
-          $(this).toggleClass('active')
+        var _this = $(this)
+        var selectDown = $('.select-down') // 下拉排序
+        var selectDownItem = selectDown.find('.type-sub-list li')
+        var selectLeft = $('.select-left') // 左滑筛选
+        var selectLeftSure = selectLeft.find('.sure')
+        var selectLeftReset = selectLeft.find('.reset')
+        var selectLeftList = selectLeft.find('.select-list')
+        var selectLeftItem = selectLeft.find('.select-list li')
+        var selectLeftChosen = selectLeft.find('.chosenType')
+        var maskDown = $('.mask')
+        var maskLeft = $('.mask1')
+        
+        _this.click(function(){
+          _this.toggleClass('active')
+          // 下拉排序
           if(idx === 0){
-            $('.mask').toggle()
-            $('.select-down').toggleClass('active')
+            maskDown.toggle()
+            selectDown.toggleClass('active')
             // 取消
-            $('.mask').click(function(){
-              $('.mask').hide()
-              $('.select-down').removeClass('active')
-              $('.tab-item').eq(0).removeClass('active')
+            maskDown.click(function(){
+              maskDown.hide()
+              selectDown.removeClass('active')
+              _this.removeClass('active')
             })
             // 排序点击选择
-            $('.select-down .type-sub-list li').click(function(){
+            selectDownItem.click(function(){
               $(this).addClass('active').siblings().removeClass('active')
-              $('.tab-item').eq(0).removeClass('active')
-              $('.mask').hide()
-              $('.select-down').removeClass('active')
-              $('.tab-item').eq(0).find('i').html($(this).html())
+              _this.removeClass('active')
+              maskDown.hide()
+              selectDown.removeClass('active')
+              _this.find('i').html($(this).html())
             })
           }
+          // 左滑筛选
           if(idx === 3){
-            $('.mask1').toggle()
-            $('.select-left').toggleClass('active')
+            maskLeft.toggle()
+            selectLeft.toggleClass('active')
             
             // 取消
-            $('.mask1').click(function(){
-              $('.mask1').hide()
-              $('.select-left').removeClass('active')
-              $('.tab-item').eq(3).removeClass('active')
+            maskLeft.click(function(){
+              maskLeft.hide()
+              selectLeft.removeClass('active')
+              _this.removeClass('active')
             })
             // 确定
-            $('.sure').click(function(){
-              $('.mask1').hide()
-              $('.select-left').removeClass('active')
-              $('.tab-item').eq(3).removeClass('active')
-              
-              var str = ''
-              $('.select-list').find('.active').each(function(idx,el){
-                str += $(el).find('i').html() + '/'
+            selectLeftSure.click(function(){
+              maskLeft.hide()
+              selectLeft.removeClass('active')
+              _this.removeClass('active')
+
+              // 将左滑选中的值传入二级筛选中
+              selectLeftChosen.each(function(idx,el){
+                if($(el).html()){
+                  $('.sub-tab a').eq(idx).addClass('chosen')
+                  $('.sub-tab a').eq(idx).find('b').html($(el).html())
+                  $('.sub-tab a').eq(idx).find('i').hide()
+                  $('.sub-tab a').eq(idx).find('.iconfont').hide()
+                }
               })
-              console.log(str)
             })
             // 重置
-            $('.reset').click(function(){
-              $('.select-list').find('li').removeClass('active')
-              $('.chosenType').html('')
+            selectLeftReset.click(function(){
+              selectLeftItem.removeClass('active')
+              selectLeftChosen.html('')
+              arr = []
             })
           }
         })
@@ -387,6 +416,7 @@
         var selectList = selectDown.find('.type-sub-list')
         var selectDownSure = selectDown.find('.sure')
         var selectDownReset = selectDown.find('.reset')
+        var mask = $('.mask2')
         var arr = [] //存放选中的数组
         // 点击
         selectList.find('li').click(function(){
@@ -394,7 +424,6 @@
           $(this).toggleClass('active')
           if($(this).hasClass('active')){
             arr.unshift(text)
-            console.log(arr,'active')
           }else{
             arr.forEach(function(val,idx){
               if(arr[idx] == text){
@@ -407,13 +436,19 @@
         _this.click(function(){
           _this.toggleClass('active')
           selectDown.toggleClass('active')
-          // 阴影遮罩
+          // 阴影遮罩切换
           if( _this.hasClass('active')){
-            $('.mask2').show()
+            mask.show()
             _this.siblings().removeClass('active')
           }else{
-            $('.mask2').hide()
+            mask.hide()
           }
+          // 阴影遮罩隐藏
+          mask.click(function(){
+            mask.hide()
+            selectDown.removeClass('active')
+            _this.removeClass('active')
+          })
           
           if(selectDown.hasClass('active')){
             selectDown.siblings('.sub-select-down').removeClass('active')
@@ -428,6 +463,16 @@
               _this.find('b').html(arr.join('/'))
               _this.find('.iconfont').hide()
               _this.find('i').hide()
+              // 将二级筛选的值传入到分类筛选中
+              $('.select-left').find('.select-list').eq(idx).find('li').each(function(index,el){
+                arr.forEach(function(val,index1){
+                  if($(el).find('i').html() == val){
+                    $(el).addClass('active')
+                  }
+                })
+                $(this).trigger('change')
+              })
+              console.log(idx)
             }else{
               _this.removeClass('active chosen')
               _this.find('b').html('')
